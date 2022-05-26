@@ -1,6 +1,14 @@
 import axios from 'axios'
 import React, {useRef} from 'react'
 import {useDropzone} from 'react-dropzone'
+import Head from "next/head";
+//import 'bootstrap/dist/css/bootstrap.min.css'
+
+
+import style from '../styles/input.module.css'
+import { Button } from 'react-bootstrap';
+
+
 
 const Input = () => {
 
@@ -39,7 +47,7 @@ const Input = () => {
 
   return (
     <>
-      <h1>Input Page</h1>
+      <h1 className={style.headingText + ' text-center'}>Input Page</h1>
       <form onSubmit={formSubmitHandler}>
         <div>
           <label htmlFor=''>First Name</label>

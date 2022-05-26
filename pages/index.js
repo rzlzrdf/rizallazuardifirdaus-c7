@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
+
 
 const index = () => {
 
@@ -20,10 +22,11 @@ const index = () => {
       {students.map((student) => {
         return(
         <div key={student.id}>
-          {student.attributes.photo.data != null &&
-            <Zoom><img src={student.attributes.photo.data.attributes.url} width='250' /></Zoom>
+          {student.attributes.photo.data !== null &&
+            <Zoom>
+              <img src={student.attributes.photo.data.attributes.url} width='200' alt=''/>
+            </Zoom>
           }
- {/*eror ngambil data dari json api*/}
           <ul>
             <li>First Name : {student.attributes.firstname}</li>
             <li>Last Name : {student.attributes.lastname}</li>
