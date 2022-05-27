@@ -91,7 +91,6 @@ const Input = () => {
         <div className="container">
           <div {...getRootProps({})}>
             <input {...getInputProps()} />
-            
             <p><FcOpenedFolder className={''} /> Drag 'n' drop a student photo here, or click to select files</p>
           </div>
           <div>
