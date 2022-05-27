@@ -1,9 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-import Zoom from 'react-medium-image-zoom'
-import 'react-medium-image-zoom/dist/styles.css'
 import { Container, Col, Row } from 'react-bootstrap'
-import style from '../styles/homepage.module.css'
+import CardStudent from '../Components/Card/CardStudent'
 
 
 const index = () => {
@@ -24,30 +22,7 @@ const index = () => {
         <h1 className='fw-light text-muted ml-3 my-4'>Home Page</h1>
       </Row>
       <Row>
-        <div className={style.cardContainer}>
-          {students.map((student) => {
-            return(
-            <div key={student.id} className={'card shadow-sm  '+style.card_}>
-              <div className={style.imgContainer}>
-                {student.attributes.photo.data !== null &&
-                  <Zoom>
-                    <img src={student.attributes.photo.data.attributes.url} className={'card-img '+style.cardImage} alt=''/>
-                  </Zoom>
-                }
-              </div>
-                <div className={'card-body ' + style.cardBody}>
-                  <ul>
-                    <li><strong>First Name : </strong>{student.attributes.firstname}</li>
-                    <li><strong>Last Name : </strong>{student.attributes.lastname}</li>
-                    <li><strong>Location : </strong>{student.attributes.location}</li>
-                  </ul>
-                </div>
-              
-            </div>
-            )
-          })}
-        </div>
-        
+        <CardStudent />
       </Row>
     </Container>
   )
