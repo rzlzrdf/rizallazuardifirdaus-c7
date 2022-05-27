@@ -94,6 +94,9 @@ const Input = () => {
             
             <p><FcOpenedFolder className={''} /> Drag 'n' drop a student photo here, or click to select files</p>
           </div>
+          <div>
+            <ul className={styles.tag}>{files}</ul>
+          </div>
         </div>
         </Col>
       </Row>
