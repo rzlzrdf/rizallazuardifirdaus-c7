@@ -1,21 +1,19 @@
 import '../styles/globals.css'
-import Link from 'next/link'
 import 'bootstrap/dist/css/bootstrap.min.css'
+//import style from '../styles/template.module.css'
+import NavigateBar from '../Components/NavigateBar/NavigateBar'
+import FooterBar from '../Components/Footer/FooterBar'
 
 
 function MyApp({ Component, pageProps }) {
 
   
   return (
-    <>
-      <ul>
-        <li><Link href="/">Home</Link></li>
-        <li><Link href="/input">Input</Link></li>
-        <li><Link href="/chart">Chart</Link></li>
-        <li><Link href="/download">Download</Link></li>
-      </ul>
+    <div>
+      <NavigateBar />
       <Component {...pageProps} />
-    </>
+      <FooterBar />
+    </div>
   
   )
 }
