@@ -15,7 +15,7 @@ const NavigateBar = () => {
             {/* <Navbar.Brand href="/"><GiWheat className={style.logo + ''}/></Navbar.Brand> */}
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="ms-auto gap-2">
+              <Nav className="ms-auto gap-4">
               <Link href="/"><Nav.Link href='/'>Home</Nav.Link></Link>
                 <Link href="/input"><Nav.Link href="/input">Input</Nav.Link></Link>
                 <Link href="/chart"><Nav.Link href="/chart">Chart</Nav.Link></Link>

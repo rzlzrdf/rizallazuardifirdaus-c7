@@ -1,0 +1,40 @@
+.cardContainer{
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card_{
+    width: 250px;
+    height: 370px;
+    margin: 10px;
+    border-width: 2px;
+    border-color: beige;
+    border-radius: 8px;
+    background-color: whitesmoke;
+}
+
+.cardBody li{
+    list-style: none;
+    margin-left: -25px;
+}
+
+.imgContainer{
+    display: flex;
+    height: 300px;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 9px 9px 0px 0px;
+    border-width: 2px;
+}
+
+.cardImage{
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+
